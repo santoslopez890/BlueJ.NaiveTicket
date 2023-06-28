@@ -9,7 +9,7 @@
  * @author David J. Barnes and Michael Kolling
  * @version 2008.03.30
  */
-public class TicketMachine
+ class TicketMachine
 {
     // The price of a ticket from this machine.
     private Integer price;
@@ -25,7 +25,7 @@ public class TicketMachine
      * Note that the price must be greater than zero, and there
      * are no checks to ensure this.
      */
-    public TicketMachine(Integer ticketCost)
+     TicketMachine(Integer ticketCost)
     {
         price = ticketCost;
         balance = 0;
@@ -36,7 +36,7 @@ public class TicketMachine
     /**
      * Return the price of a ticket.
      */
-    public Integer getPrice()
+     Integer getPrice()
     {
         return price;
     }
@@ -45,7 +45,7 @@ public class TicketMachine
      * Return ticketNumber.
      * (Increments on each print.)
      */
-    public Integer getTicketNumber()
+     Integer getTicketNumber()
     {
         return ticketNumber;
     }
@@ -54,7 +54,7 @@ public class TicketMachine
      * Return the amount of money already inserted for the
      * next ticket.
      */
-    public Integer getBalance()
+     Integer getBalance()
     {
         return balance;
     }
@@ -62,18 +62,18 @@ public class TicketMachine
     /**
      * Receive an amount of money in cents from a customer.
      */
-    public Integer insertMoney(Integer amount)
+     Integer insertMoney(Integer amount)
     {
         balance = balance + amount;
         return balance;
     }
     
-    public Integer calculateTotal(){
+     Integer calculateTotal(){
         total = balance + total;
         return total;
     }
     
-    public Integer incrementTicketNumber(){
+     Integer incrementTicketNumber(){
         ticketNumber++;
         return ticketNumber;
     }
@@ -84,7 +84,7 @@ public class TicketMachine
      * Update the total collected and
      * reduce the balance to zero.
      */
-    public String printTicket()
+     String printTicket()
     {
         //Increment the number of tickets printed
         incrementTicketNumber();
